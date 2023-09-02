@@ -8,8 +8,7 @@ metadata:
 spec:
   allocateLoadBalancerNodePorts: true
   ports:
-  - nodePort: 31255
-    port: 80
+  - port: 80
     protocol: TCP
     targetPort: 80
   selector:
