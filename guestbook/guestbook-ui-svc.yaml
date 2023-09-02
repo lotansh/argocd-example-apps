@@ -6,6 +6,12 @@ metadata:
     metallb.universe.tf/ip-allocated-from-pool: first-pool
     metallb.universe.tf/loadBalancerIPs: 10.240.0.110
 spec:
+  allocateLoadBalancerNodePorts: true
+  ports:
+  - nodePort: 31255
+    port: 80
+    protocol: TCP
+    targetPort: 80
   selector:
     app: guestbook-ui
   type: LoadBalancer
